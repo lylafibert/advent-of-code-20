@@ -1,5 +1,5 @@
 import getHighestSeatId from "./getHighestSeatId";
-import puzzleInput from "./puzzleInput";
+import puzzleInput from "../puzzleInput";
 
 const seatCodes = ["FBFBBFFRLR", "BFFFBBFRRR", "FFFBBBFRRR", "BBFFBBFRLL"];
 

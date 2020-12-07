@@ -7,4 +7,5 @@ export const answers = [
   ['b']
 ]
 
+export const sharedQuestionResults = [3, 3, 0, 1, 1, 1]
 export const results = [6, 3, 3, 3, 1, 1]

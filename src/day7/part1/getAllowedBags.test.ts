@@ -1,6 +1,6 @@
 import getAllowedBags from './getAllowedBags'
-import testData from './testData'
-import puzzleInput from './puzzleInput'
+import testData from '../testData'
+import puzzleInput from '../puzzleInput'
 
 describe('getAllowedBags', () => {
   it('returns the number of bags that can eventually hold a shiny gold bag', () => {

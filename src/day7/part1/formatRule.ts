@@ -1,4 +1,4 @@
-import {BagRule} from './BagRule'
+import {BagRule} from '../BagRule'
 
 export default (rule:string):BagRule => {
   let contains:string[] = []

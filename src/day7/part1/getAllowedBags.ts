@@ -1,4 +1,4 @@
-import {BagRule} from './BagRule'
+import {BagRule} from '../BagRule'
 import formatRule from './formatRule'
 
 interface BagLists {

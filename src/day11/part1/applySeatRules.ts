@@ -1,5 +1,10 @@
-export default (seatLayout: string[]): string[] => {
+interface NewLayout {
+  layout: string[];
+  hasChanged: boolean;
+}
+export default (seatLayout: string[]): NewLayout => {
   const newSeatLayout = [...seatLayout];
+  let hasChanged = false;
   seatLayout.forEach((rowString, rowIndex) => {
     const row = rowString.split("");
     const newRow = [...row];
@@ -34,12 +39,14 @@ export default (seatLayout: string[]): string[] => {
         }, 0);
         if (space === "L" && occupiedAdjacentSeats === 0) {
           newRow.splice(spaceIndex, 1, "#");
+          hasChanged = true;
         } else if (space === "#" && occupiedAdjacentSeats >= 4) {
+          hasChanged = true;
           newRow.splice(spaceIndex, 1, "L");
         }
       }
     });
     newSeatLayout.splice(rowIndex, 1, newRow.join(""));
   });
-  return newSeatLayout;
+  return { layout: newSeatLayout, hasChanged };
 };

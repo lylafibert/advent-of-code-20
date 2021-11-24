@@ -1,11 +1,12 @@
 const reportRepare = (entries: number[]): number => {
   let result: number;
-  entries.forEach((entry, index) => {
-    const remainingEntries = entries.slice(index + 1);
+  for (let i = 0; i < entries.length && !result; i++) {
+    const remainingEntries = entries.slice(i + 1);
+    const entry = entries[i];
     remainingEntries.forEach((remainingEntry) => {
       if (entry + remainingEntry === 2020) result = entry * remainingEntry;
     });
-  });
+  }
   return result;
 };
 
